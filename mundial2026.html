@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundial 2026 | World Football Hub</title>
+  <meta name="description" content="Todo sobre el Mundial 2026: próximos partidos, clasificados a cuartos de final, probabilidades, alineaciones, goleadores, campeones históricos y datos curiosos.">
+  <meta name="keywords" content="mundial 2026, próximos partidos, clasificados a cuartos de final, probabilidades, alineaciones, goleadores, campeones del mundial">
+  <meta name="author" content="Estudiante - World Football Hub">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://Felixnosoy.github.io/football-world/mundial2026.html">
+  <meta name="theme-color" content="#0b6e4f">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mundial 2026 | World Football Hub">
+  <meta property="og:description" content="Próximos partidos, clasificados a cuartos de final, probabilidades, alineaciones y campeones del Mundial 2026.">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Estadio_Azteca1706p1.jpg/1280px-Estadio_Azteca1706p1.jpg">
+  <meta property="og:url" content="https://Felixnosoy.github.io/football-world/mundial2026.html">
+  <meta property="og:site_name" content="World Football Hub">
+  <meta property="og:locale" content="es_ES">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mundial 2026 | World Football Hub">
+  <meta name="twitter:description" content="Próximos partidos, clasificados a cuartos de final, probabilidades, alineaciones y campeones del Mundial 2026.">
+  <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Estadio_Azteca1706p1.jpg/1280px-Estadio_Azteca1706p1.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t = localStorage.getItem('wfh-theme') || 'light'; document.documentElement.setAttribute('data-theme', t); document.documentElement.setAttribute('data-bs-theme', t);})();</script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-wfh sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-trophy-fill"></i> World Football Hub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="mundial2026.html">Mundial 2026</a></li>
+        <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipos.html">Equipos</a></li>
+        <li class="nav-item"><a class="nav-link" href="estadios.html">Estadios</a></li>
+        <li class="nav-item"><a class="nav-link" href="enlaces.html">Enlaces de Interés</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+      </ul>
+      <button class="theme-toggle-btn ms-lg-3" title="Cambiar modo claro/oscuro">
+        <i class="theme-icon bi bi-moon-stars-fill"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero-sm text-center">
+  <div class="container">
+    <h1><i class="bi bi-trophy-fill text-accent"></i> Mundial 2026</h1>
+    <p class="lead mb-3">Calendario, clasificados a cuartos de final, probabilidades, alineaciones, goleadores e historia de la Copa del Mundo.</p>
+    <a href="https://futbol-libres.su/" target="_blank" rel="noopener" class="btn btn-accent btn-lg px-4">
+      <i class="bi bi-play-circle-fill me-1"></i> Ver partidos en vivo
+    </a>
+  </div>
+</header>
+
+<section class="bg-surface">
+  <div class="container">
+    <div class="widget-box text-center mx-auto" style="max-width:560px;">
+      <p class="text-muted mb-2"><i class="bi bi-hourglass-split text-accent me-1"></i>Faltan para <span id="countdownLabel">el próximo partido</span></p>
+      <div class="d-flex justify-content-center gap-3">
+        <div><div class="clock-display" id="cdDays">00</div><div class="small text-muted">Días</div></div>
+        <div><div class="clock-display" id="cdHours">00</div><div class="small text-muted">Horas</div></div>
+        <div><div class="clock-display" id="cdMinutes">00</div><div class="small text-muted">Min</div></div>
+        <div><div class="clock-display" id="cdSeconds">00</div><div class="small text-muted">Seg</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-surface-2">
+  <div class="container">
+    <h2 class="section-title">Próximos partidos</h2>
+    <ul id="fixturesContainer" class="list-group list-group-flush widget-box p-2"></ul>
+  </div>
+</section>
+
+<section class="bg-surface">
+  <div class="container">
+    <h2 class="section-title">Clasificados a cuartos de final</h2>
+    <p class="text-muted">Marruecos, Francia, Noruega e Inglaterra ya avanzaron tras ganar sus octavos de final. Los otros cuatro cupos se definen hoy 6 y mañana 7 de julio.</p>
+    <div id="standingsContainer" class="row g-4"></div>
+  </div>
+</section>
+
+<section class="bg-surface-2">
+  <div class="container">
+    <h2 class="section-title">¿Quién ganará el Mundial 2026?</h2>
+    <p class="text-muted">Vota por tu selección favorita y mira qué opina el resto de la comunidad.</p>
+    <div id="pollContainer" class="widget-box"></div>
+  </div>
+</section>
+
+<section class="bg-surface">
+  <div class="container">
+    <h2 class="section-title">Partido destacado</h2>
+    <div id="featuredMatchContainer" class="row g-4"></div>
+  </div>
+</section>
+
+<section class="bg-surface-2">
+  <div class="container">
+    <h2 class="section-title">Goleadores destacados</h2>
+    <ul id="topScorersContainer" class="list-group list-group-flush widget-box p-2"></ul>
+  </div>
+</section>
+
+<section class="bg-surface">
+  <div class="container">
+    <h2 class="section-title">Últimos campeones del Mundial</h2>
+    <ol class="list-ordered-custom row row-cols-1 row-cols-md-2 g-2">
+      <li class="col"><strong>2022</strong> — Argentina</li>
+      <li class="col"><strong>2018</strong> — Francia</li>
+      <li class="col"><strong>2014</strong> — Alemania</li>
+      <li class="col"><strong>2010</strong> — España</li>
+      <li class="col"><strong>2006</strong> — Italia</li>
+      <li class="col"><strong>2002</strong> — Brasil</li>
+      <li class="col"><strong>1998</strong> — Francia</li>
+      <li class="col"><strong>1994</strong> — Brasil</li>
+    </ol>
+  </div>
+</section>
+
+<section class="bg-surface-2">
+  <div class="container">
+    <h2 class="section-title">Datos curiosos del fútbol</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="hover-card p-3 text-center">
+          <i class="bi bi-globe-americas text-accent mb-2" style="font-size:2rem;"></i>
+          <p class="mb-0">El Mundial 2026 es el primero organizado por tres países: Estados Unidos, México y Canadá.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="hover-card p-3 text-center">
+          <i class="bi bi-trophy text-accent mb-2" style="font-size:2rem;"></i>
+          <p class="mb-0">Brasil es el único país que ha jugado todos los Mundiales desde 1930.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="hover-card p-3 text-center">
+          <i class="bi bi-people-fill text-accent mb-2" style="font-size:2rem;"></i>
+          <p class="mb-0">Por primera vez, 48 selecciones se disputan la Copa del Mundo en un mismo torneo.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="hover-card p-3 text-center">
+          <i class="bi bi-stopwatch text-accent mb-2" style="font-size:2rem;"></i>
+          <p class="mb-0">El primer Mundial de la historia se disputó en Uruguay en 1930, con apenas 13 selecciones.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="hover-card p-3 text-center">
+          <i class="bi bi-lightning-charge-fill text-accent mb-2" style="font-size:2rem;"></i>
+          <p class="mb-0">El gol más rápido en la historia de los Mundiales se marcó a los 11 segundos (Hakan Şükür, Turquía, 2002).</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="hover-card p-3 text-center">
+          <i class="bi bi-award-fill text-accent mb-2" style="font-size:2rem;"></i>
+          <p class="mb-0">Miroslav Klose es el máximo goleador histórico de los Mundiales, con 16 goles.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="hover-card p-3 text-center">
+          <i class="bi bi-emoji-sunglasses text-accent mb-2" style="font-size:2rem;"></i>
+          <p class="mb-0">Alemania, Italia y Argentina comparten el segundo lugar histórico con 4 títulos cada una, detrás de Brasil.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="hover-card p-3 text-center">
+          <i class="bi bi-tv-fill text-accent mb-2" style="font-size:2rem;"></i>
+          <p class="mb-0">El Mundial es el evento deportivo más visto del planeta, con miles de millones de espectadores en su fase final.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h5 class="brand-font text-white"><i class="bi bi-trophy-fill text-accent"></i> World Football Hub</h5>
+        <p class="small">Vive la pasión del fútbol mundial. Noticias, equipos, estadios y mucho más en un solo lugar.</p>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-white mb-3">Enlaces</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="mundial2026.html">Mundial 2026</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="equipos.html">Equipos</a></li>
+          <li><a href="estadios.html">Estadios</a></li>
+          <li><a href="enlaces.html">Enlaces de interés</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="privacidad.html">Políticas de privacidad</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="text-white mb-3">Síguenos</h6>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+        <a href="mailto:fdsuerov@gmail.com" class="d-inline-block mt-3 small"><i class="bi bi-envelope-fill me-1"></i>fdsuerov@gmail.com</a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <p class="text-center small mb-0">&copy; 2026 World Football Hub. Todos los derechos reservados. | <a href="privacidad.html">Políticas de Privacidad</a></p>
+  </div>
+</footer>
+
+<button id="backToTopBtn" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
